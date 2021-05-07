@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .full{
+        text-align:center;
+        font-size:20px;
+        font-weight: bold;
+        margin:20px;
+        border-radius:10px;
+    }
+    input{
+        border-radius:10px;
+        border:1px solid red;
+        padding:10px;
+        font-size:20px;
+        margin:10px;
+    }
+    #demo{
+        color:red;
+    }</style>
+</head>
+<body>
+    <div class="full">
+    Maths     :<input id="maths" type="text"><br>
+    Physics   :<input id="physics" type="text"><br>
+    Chemistry:<input id="chemistry" type="text"><br>
+    <button class="full" onclick="cut()">Click here</button>
+    <h1 id="demo"></h1>
+</div>
+</body>
+<script>
+    function cut(){
+        var a=Number(document.getElementById("maths").value);
+            b=Number(document.getElementById("physics").value);
+            c=Number(document.getElementById("chemistry").value);   
+        result=(a/2)+(b/4)+(c/4);
+
+        document.getElementById("demo").innerHTML=result;
+    };       
+        </script>
+</html>
